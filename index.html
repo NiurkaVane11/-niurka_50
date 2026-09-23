@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@niurka_50</title>
+    <link rel="icon" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --font:
+          "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f7f6fa;
+        font-family: var(--font);
+        color: #111;
+      }
+
+      /* Pink + purple gradient with soft glows */
+      .card {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        min-height: 100vh;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            circle at 15% 55%,
+            rgba(255, 130, 200, 0.75) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at 90% 90%,
+            rgba(150, 100, 255, 0.85) 0%,
+            transparent 55%
+          ),
+          linear-gradient(180deg, #ffa6d8 0%, #e79bf0 45%, #b98af5 100%);
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Top image that fades into the gradient */
+      .hero {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 62%;
+        background: url("download.jpg") center top / cover no-repeat;
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          #000 55%,
+          transparent 100%
+        );
+        mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+        margin-top: 42vh;
+        padding: 0 20px 32px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+      .subtitle {
+        margin-top: 6px;
+        font-family: var(--font);
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      .icons {
+        display: flex;
+        gap: 22px;
+        margin: 18px 0 32px;
+      }
+      .icons a {
+        color: #111;
+        display: block;
+        transition: transform 0.15s;
+      }
+      .icons a:hover {
+        transform: scale(1.15);
+      }
+      .icons svg {
+        width: 26px;
+        height: 26px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* Buttons: icon circle on the left, text centered */
+      .btn {
+        position: relative;
+        width: 100%;
+        padding: 16px 56px;
+        margin-bottom: 12px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        color: #111;
+        text-decoration: none;
+        font-family: var(--font);
+        font-weight: 500;
+        font-size: 0.85rem;
+        text-transform: lowercase;
+        transition:
+          background 0.15s,
+          transform 0.15s;
+      }
+      .btn:hover {
+        background: rgba(255, 255, 255, 0.65);
+        transform: translateY(-2px);
+      }
+
+      .btn .dot {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn .dot svg {
+        width: 34px;
+        height: 34px;
+        image-rendering: pixelated;
+      }
+
+      /* On desktop: show it like a phone card */
+      @media (min-width: 500px) {
+        body {
+          padding: 32px 0;
+        }
+        .card {
+          min-height: 720px;
+          height: 720px;
+          border-radius: 32px;
+          box-shadow: 0 20px 60px rgba(150, 80, 190, 0.3);
+        }
+        .content {
+          margin-top: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="hero"></div>
+
+      <div class="content">
+        <h1>@niurka_50</h1>
+        <p class="subtitle">Connect with me on my platforms</p>
+
+        <nav class="icons" aria-label="Social links">
+          <a
+            href="https://github.com/NiurkaVane11"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/niurka-yupanqui-931a8122a/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="mailto:vane321yupanqui@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/niurka_50"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </nav>
+
+        <a
+          class="btn"
+          href="NiurkaYupanqui-CV.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="dot"
+            ><svg
+              viewBox="0 0 16 11"
+              shape-rendering="crispEdges"
+              aria-hidden="true"
+            >
+              <rect x="7" y="0" width="2" height="1" fill="#c2185b" />
+              <rect x="6" y="1" width="1" height="1" fill="#c2185b" />
+              <rect x="7" y="1" width="2" height="1" fill="#fde0ec" />
+              <rect x="9" y="1" width="1" height="1" fill="#c2185b" />
+              <rect x="2" y="2" width="1" height="1" fill="#c2185b" />
+              <rect x="5" y="2" width="1" height="1" fill="#c2185b" />
+              <rect x="6" y="2" width="4" height="1" fill="#fde0ec" />
+              <rect x="10" y="2" width="1" height="1" fill="#c2185b" />
+              <rect x="13" y="2" width="1" height="1" fill="#c2185b" />
+              <rect x="1" y="3" width="1" height="1" fill="#c2185b" />
+              <rect x="2" y="3" width="1" height="1" fill="#f48fb1" />
+              <rect x="3" y="3" width="1" height="1" fill="#c2185b" />
+              <rect x="5" y="3" width="1" height="1" fill="#c2185b" />
+              <rect x="6" y="3" width="1" height="1" fill="#fde0ec" />
+              <rect x="7" y="3" width="2" height="1" fill="#ffb300" />
+              <rect x="9" y="3" width="1" height="1" fill="#fde0ec" />
+              <rect x="10" y="3" width="1" height="1" fill="#c2185b" />
+              <rect x="12" y="3" width="1" height="1" fill="#c2185b" />
+              <rect x="13" y="3" width="1" height="1" fill="#f48fb1" />
+              <rect x="14" y="3" width="1" height="1" fill="#c2185b" />
+              <rect x="0" y="4" width="1" height="1" fill="#c2185b" />
+              <rect x="1" y="4" width="1" height="1" fill="#f48fb1" />
+              <rect x="2" y="4" width="1" height="1" fill="#fde0ec" />
+              <rect x="3" y="4" width="1" height="1" fill="#f48fb1" />
+              <rect x="4" y="4" width="2" height="1" fill="#c2185b" />
+              <rect x="6" y="4" width="1" height="1" fill="#fde0ec" />
+              <rect x="7" y="4" width="2" height="1" fill="#ffb300" />
+              <rect x="9" y="4" width="1" height="1" fill="#fde0ec" />
+              <rect x="10" y="4" width="2" height="1" fill="#c2185b" />
+              <rect x="12" y="4" width="1" height="1" fill="#f48fb1" />
+              <rect x="13" y="4" width="1" height="1" fill="#fde0ec" />
+              <rect x="14" y="4" width="1" height="1" fill="#f48fb1" />
+              <rect x="15" y="4" width="1" height="1" fill="#c2185b" />
+              <rect x="0" y="5" width="1" height="1" fill="#c2185b" />
+              <rect x="1" y="5" width="1" height="1" fill="#f48fb1" />
+              <rect x="2" y="5" width="2" height="1" fill="#fde0ec" />
+              <rect x="4" y="5" width="1" height="1" fill="#f48fb1" />
+              <rect x="5" y="5" width="1" height="1" fill="#c2185b" />
+              <rect x="6" y="5" width="1" height="1" fill="#f48fb1" />
+              <rect x="7" y="5" width="2" height="1" fill="#fde0ec" />
+              <rect x="9" y="5" width="1" height="1" fill="#f48fb1" />
+              <rect x="10" y="5" width="1" height="1" fill="#c2185b" />
+              <rect x="11" y="5" width="1" height="1" fill="#f48fb1" />
+              <rect x="12" y="5" width="2" height="1" fill="#fde0ec" />
+              <rect x="14" y="5" width="1" height="1" fill="#f48fb1" />
+              <rect x="15" y="5" width="1" height="1" fill="#c2185b" />
+              <rect x="1" y="6" width="1" height="1" fill="#c2185b" />
+              <rect x="2" y="6" width="1" height="1" fill="#f48fb1" />
+              <rect x="3" y="6" width="2" height="1" fill="#fde0ec" />
+              <rect x="5" y="6" width="2" height="1" fill="#f48fb1" />
+              <rect x="7" y="6" width="2" height="1" fill="#fde0ec" />
+              <rect x="9" y="6" width="2" height="1" fill="#f48fb1" />
+              <rect x="11" y="6" width="2" height="1" fill="#fde0ec" />
+              <rect x="13" y="6" width="1" height="1" fill="#f48fb1" />
+              <rect x="14" y="6" width="1" height="1" fill="#c2185b" />
+              <rect x="2" y="7" width="1" height="1" fill="#c2185b" />
+              <rect x="3" y="7" width="2" height="1" fill="#f48fb1" />
+              <rect x="5" y="7" width="1" height="1" fill="#ec407a" />
+              <rect x="6" y="7" width="4" height="1" fill="#f48fb1" />
+              <rect x="10" y="7" width="1" height="1" fill="#ec407a" />
+              <rect x="11" y="7" width="2" height="1" fill="#f48fb1" />
+              <rect x="13" y="7" width="1" height="1" fill="#c2185b" />
+              <rect x="3" y="8" width="2" height="1" fill="#c2185b" />
+              <rect x="5" y="8" width="1" height="1" fill="#ec407a" />
+              <rect x="6" y="8" width="6" height="1" fill="#f48fb1" />
+              <rect x="12" y="8" width="1" height="1" fill="#ec407a" />
+              <rect x="13" y="8" width="2" height="1" fill="#c2185b" />
+              <rect x="4" y="9" width="2" height="1" fill="#c2185b" />
+              <rect x="6" y="9" width="6" height="1" fill="#ec407a" />
+              <rect x="12" y="9" width="2" height="1" fill="#c2185b" />
+              <rect x="6" y="10" width="6" height="1" fill="#c2185b" /></svg
+          ></span>
+          CV
+        </a>
+        <a
+          class="btn"
+          href="https://delightful-flower-0ca039a0f.7.azurestaticapps.net/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="dot"
+            ><svg
+              viewBox="0 0 15 15"
+              shape-rendering="crispEdges"
+              aria-hidden="true"
+            >
+              <rect x="6" y="0" width="3" height="1" fill="#7a1f5c" />
+              <rect x="4" y="1" width="7" height="1" fill="#7a1f5c" />
+              <rect x="2" y="2" width="2" height="1" fill="#7a1f5c" />
+              <rect x="4" y="2" width="2" height="1" fill="#ffe3f3" />
+              <rect x="6" y="2" width="1" height="1" fill="#f6a9d8" />
+              <rect x="7" y="2" width="1" height="1" fill="#e26fb8" />
+              <rect x="8" y="2" width="2" height="1" fill="#f6a9d8" />
+              <rect x="10" y="2" width="1" height="1" fill="#e26fb8" />
+              <rect x="11" y="2" width="2" height="1" fill="#7a1f5c" />
+              <rect x="2" y="3" width="1" height="1" fill="#7a1f5c" />
+              <rect x="3" y="3" width="2" height="1" fill="#ffe3f3" />
+              <rect x="5" y="3" width="7" height="1" fill="#e26fb8" />
+              <rect x="12" y="3" width="1" height="1" fill="#7a1f5c" />
+              <rect x="1" y="4" width="1" height="1" fill="#7a1f5c" />
+              <rect x="2" y="4" width="2" height="1" fill="#ffe3f3" />
+              <rect x="4" y="4" width="3" height="1" fill="#f6a9d8" />
+              <rect x="7" y="4" width="1" height="1" fill="#e26fb8" />
+              <rect x="8" y="4" width="5" height="1" fill="#f6a9d8" />
+              <rect x="13" y="4" width="1" height="1" fill="#7a1f5c" />
+              <rect x="1" y="5" width="1" height="1" fill="#7a1f5c" />
+              <rect x="2" y="5" width="1" height="1" fill="#f6a9d8" />
+              <rect x="3" y="5" width="1" height="1" fill="#e26fb8" />
+              <rect x="4" y="5" width="3" height="1" fill="#f6a9d8" />
+              <rect x="7" y="5" width="1" height="1" fill="#e26fb8" />
+              <rect x="8" y="5" width="3" height="1" fill="#f6a9d8" />
+              <rect x="11" y="5" width="1" height="1" fill="#e26fb8" />
+              <rect x="12" y="5" width="1" height="1" fill="#f6a9d8" />
+              <rect x="13" y="5" width="1" height="1" fill="#7a1f5c" />
+              <rect x="0" y="6" width="2" height="1" fill="#7a1f5c" />
+              <rect x="2" y="6" width="1" height="1" fill="#f6a9d8" />
+              <rect x="3" y="6" width="1" height="1" fill="#e26fb8" />
+              <rect x="4" y="6" width="3" height="1" fill="#f6a9d8" />
+              <rect x="7" y="6" width="1" height="1" fill="#e26fb8" />
+              <rect x="8" y="6" width="3" height="1" fill="#f6a9d8" />
+              <rect x="11" y="6" width="1" height="1" fill="#e26fb8" />
+              <rect x="12" y="6" width="1" height="1" fill="#f6a9d8" />
+              <rect x="13" y="6" width="2" height="1" fill="#7a1f5c" />
+              <rect x="0" y="7" width="2" height="1" fill="#7a1f5c" />
+              <rect x="2" y="7" width="11" height="1" fill="#e26fb8" />
+              <rect x="13" y="7" width="2" height="1" fill="#7a1f5c" />
+              <rect x="0" y="8" width="2" height="1" fill="#7a1f5c" />
+              <rect x="2" y="8" width="1" height="1" fill="#f6a9d8" />
+              <rect x="3" y="8" width="1" height="1" fill="#e26fb8" />
+              <rect x="4" y="8" width="3" height="1" fill="#f6a9d8" />
+              <rect x="7" y="8" width="1" height="1" fill="#e26fb8" />
+              <rect x="8" y="8" width="3" height="1" fill="#f6a9d8" />
+              <rect x="11" y="8" width="1" height="1" fill="#e26fb8" />
+              <rect x="12" y="8" width="1" height="1" fill="#f6a9d8" />
+              <rect x="13" y="8" width="2" height="1" fill="#7a1f5c" />
+              <rect x="1" y="9" width="1" height="1" fill="#7a1f5c" />
+              <rect x="2" y="9" width="1" height="1" fill="#f6a9d8" />
+              <rect x="3" y="9" width="1" height="1" fill="#e26fb8" />
+              <rect x="4" y="9" width="3" height="1" fill="#f6a9d8" />
+              <rect x="7" y="9" width="1" height="1" fill="#e26fb8" />
+              <rect x="8" y="9" width="3" height="1" fill="#f6a9d8" />
+              <rect x="11" y="9" width="1" height="1" fill="#e26fb8" />
+              <rect x="12" y="9" width="1" height="1" fill="#f6a9d8" />
+              <rect x="13" y="9" width="1" height="1" fill="#7a1f5c" />
+              <rect x="1" y="10" width="1" height="1" fill="#7a1f5c" />
+              <rect x="2" y="10" width="5" height="1" fill="#f6a9d8" />
+              <rect x="7" y="10" width="1" height="1" fill="#e26fb8" />
+              <rect x="8" y="10" width="5" height="1" fill="#f6a9d8" />
+              <rect x="13" y="10" width="1" height="1" fill="#7a1f5c" />
+              <rect x="2" y="11" width="1" height="1" fill="#7a1f5c" />
+              <rect x="3" y="11" width="9" height="1" fill="#e26fb8" />
+              <rect x="12" y="11" width="1" height="1" fill="#7a1f5c" />
+              <rect x="2" y="12" width="2" height="1" fill="#7a1f5c" />
+              <rect x="4" y="12" width="1" height="1" fill="#e26fb8" />
+              <rect x="5" y="12" width="2" height="1" fill="#f6a9d8" />
+              <rect x="7" y="12" width="1" height="1" fill="#e26fb8" />
+              <rect x="8" y="12" width="2" height="1" fill="#f6a9d8" />
+              <rect x="10" y="12" width="1" height="1" fill="#e26fb8" />
+              <rect x="11" y="12" width="2" height="1" fill="#7a1f5c" />
+              <rect x="4" y="13" width="7" height="1" fill="#7a1f5c" />
+              <rect x="6" y="14" width="3" height="1" fill="#7a1f5c" /></svg
+          ></span>
+          Portfolio website
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
