@@ -212,6 +212,47 @@
         border-radius: 9px;
       }
 
+      /* botón destacado: curso de microsoft */
+      .btn.featured {
+        background: linear-gradient(
+          110deg,
+          rgba(255, 255, 255, 0.55) 0%,
+          rgba(255, 220, 245, 0.75) 45%,
+          rgba(255, 255, 255, 0.55) 60%
+        );
+        background-size: 250% 100%;
+        animation: sheen 3.5s ease-in-out infinite;
+      }
+      .btn.featured:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      .btn .tag {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 3px 8px;
+        border: 2px solid #111;
+        border-radius: 999px;
+        background: #ffb300;
+        font-size: 0.68rem;
+        font-weight: 700;
+      }
+      @keyframes sheen {
+        0%,
+        100% {
+          background-position: 100% 0;
+        }
+        50% {
+          background-position: 0 0;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .btn.featured {
+          animation: none;
+        }
+      }
+
       .copyright {
         margin-top: auto;
         padding-top: 18px;
@@ -498,6 +539,50 @@
         >
           <span class="dot"><img src="bimo.png" alt="" /></span>
           Bimo
+        </a>
+        <a
+          class="btn featured"
+          href="https://learn.microsoft.com/en-us/plans/5p2dsqto457g2x?&sharingId=DB2D6F5B9020FCF6&wt.mc_id=studentamb_613126"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="dot"
+            ><svg
+              viewBox="0 0 16 12"
+              shape-rendering="crispEdges"
+              aria-hidden="true"
+            >
+              <rect x="7" y="0" width="2" height="1" fill="#4a2a7a" />
+              <rect x="5" y="1" width="2" height="1" fill="#4a2a7a" />
+              <rect x="7" y="1" width="2" height="1" fill="#b98af5" />
+              <rect x="9" y="1" width="2" height="1" fill="#4a2a7a" />
+              <rect x="3" y="2" width="2" height="1" fill="#4a2a7a" />
+              <rect x="5" y="2" width="6" height="1" fill="#b98af5" />
+              <rect x="11" y="2" width="2" height="1" fill="#4a2a7a" />
+              <rect x="1" y="3" width="2" height="1" fill="#4a2a7a" />
+              <rect x="3" y="3" width="10" height="1" fill="#b98af5" />
+              <rect x="13" y="3" width="2" height="1" fill="#4a2a7a" />
+              <rect x="3" y="4" width="2" height="1" fill="#4a2a7a" />
+              <rect x="5" y="4" width="6" height="1" fill="#e79bf0" />
+              <rect x="11" y="4" width="2" height="1" fill="#4a2a7a" />
+              <rect x="13" y="4" width="1" height="1" fill="#ffb300" />
+              <rect x="3" y="5" width="1" height="1" fill="#4a2a7a" />
+              <rect x="4" y="5" width="2" height="1" fill="#4a2a7a" />
+              <rect x="6" y="5" width="4" height="1" fill="#4a2a7a" />
+              <rect x="10" y="5" width="2" height="1" fill="#4a2a7a" />
+              <rect x="13" y="5" width="1" height="1" fill="#ffb300" />
+              <rect x="4" y="6" width="1" height="1" fill="#4a2a7a" />
+              <rect x="5" y="6" width="6" height="1" fill="#ffa6d8" />
+              <rect x="11" y="6" width="1" height="1" fill="#4a2a7a" />
+              <rect x="13" y="6" width="1" height="1" fill="#ffb300" />
+              <rect x="4" y="7" width="1" height="1" fill="#4a2a7a" />
+              <rect x="5" y="7" width="6" height="1" fill="#ffa6d8" />
+              <rect x="11" y="7" width="1" height="1" fill="#4a2a7a" />
+              <rect x="12" y="7" width="3" height="2" fill="#ffb300" />
+              <rect x="5" y="8" width="6" height="1" fill="#4a2a7a" /></svg
+          ></span>
+          curso gratis de ia · microsoft
+          <span class="tag">free</span>
         </a>
 
         <p class="copyright">&copy; 2026 Niurka Y.</p>
