@@ -1,6 +1,6 @@
 # niurka · links
 
-Página personal tipo *link-in-bio* con mis redes, proyectos y CV descargable.
+Página personal tipo *link-in-bio* con mis redes y proyectos.
 
 🔗 **Sitio:** https://niurkavane11.github.io/-niurka_50/
 
